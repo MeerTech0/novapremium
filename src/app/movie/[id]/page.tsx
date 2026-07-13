@@ -21,7 +21,6 @@ const MovieDetailsPage = ({ params }: MovieDetailsPageProps) => {
   const movieId = parseInt(params.id);
   const { movie, loading, error } = useMovieDetails(movieId);
   const { isInWatchlist, addToWatchlist, removeFromWatchlist, isInFavorites, addToFavorites, removeFromFavorites } = useStore();
-  const [showTrailer, setShowTrailer] = useState(false);
 
   if (loading) {
     return (
@@ -180,15 +179,17 @@ const MovieDetailsPage = ({ params }: MovieDetailsPageProps) => {
                   Watch Now
                 </motion.button>
                 {trailer && (
-                  <motion.button
+                  <motion.a
+                    href={`https://www.youtube.com/watch?v=${trailer.key}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => setShowTrailer(true)}
-                    className="btn-secondary gap-2"
+                    className="btn-secondary gap-2 inline-flex items-center"
                   >
                     <FiPlay className="w-5 h-5" />
                     Watch Trailer
-                  </motion.button>
+                  </motion.a>
                 )}
                 <motion.button
                   whileHover={{ scale: 1.05 }}

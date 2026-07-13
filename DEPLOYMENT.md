@@ -181,14 +181,14 @@ NEXT_PUBLIC_TMDB_IMAGE_URL=https://image.tmdb.org/t/p
 
 ---
 
-## 🔒 Environment Variables
+## 🔐 Environment Variables
 
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `NEXT_PUBLIC_TMDB_API_KEY` | TMDB API key | ✅ Yes |
 | `NEXT_PUBLIC_TMDB_BASE_URL` | TMDB API base URL | ✅ Yes |
 | `NEXT_PUBLIC_TMDB_IMAGE_URL` | TMDB image base URL | ✅ Yes |
-| `NEXT_PUBLIC_ENV` | Environment (development/production) | ⚪ No |
+| `NEXT_PUBLIC_ENV` | Environment (development/production) | ⭕ No |
 
 ---
 
@@ -272,7 +272,7 @@ MIT License - Free for personal and commercial use
 
 ---
 
-## 🎯 Roadmap
+## 🏃 Roadmap
 
 - [ ] User authentication with NextAuth.js
 - [ ] Backend API with Node.js/Express
